@@ -1,0 +1,27 @@
+<% include ../views/partials/header %>
+<link rel="stylesheet" href="bootstrap.css">
+
+<link rel="stylesheet" href="boewer-components/bootstrap/dist/css/bootstrap.css">
+
+
+<div class="row">
+    <div class="col-md-6">
+        <form method="post" action="/todo/edit/<%= todo._id %>">
+            <div class="form-group">
+                <label>Your todo's name</label>
+                <input type="text" class="form-control" name="text" placeholder="Add Todo" value="<%= todo.text %>">
+            </div>
+            <div>
+                <label> Your todo's Body</label>
+                <textarea  class="form-control" name="body" placeholder="Add Body"><%= todo.body %></textarea>
+            </div>
+            <br>
+            <button  class="btn btn-primary" type="submit">Submit</button> <a  class="btn btn-danger" href="/">Cancel</a>
+        </form>
+    </div>
+    <div class="col-md-6">
+
+    </div>
+</div>
+
+<% include ../views/partials/footer %>
